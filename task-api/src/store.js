@@ -30,7 +30,7 @@ const remove = (id) => {
 
 // Used in tests to reset state between test suites
 const reset = () => {
-  tasks = [];
+  tasks.length = 0; // More efficient way to clear array in-place
 };
 
 module.exports = { getAll, getById, insert, update, remove, reset };
