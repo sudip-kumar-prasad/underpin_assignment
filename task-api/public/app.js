@@ -37,7 +37,7 @@ function renderTasks(tasks) {
         <div class="task-meta">
           <span class="badge badge-${task.status}">${task.status.replace('_', ' ')}</span>
           <span>Priority: ${task.priority}</span>
-          ${task.dueDate ? `<span>Due: ${new Date(task.dueDate).toLocaleDateString()}</span>` : ''}
+          ${task.dueDate ? `<span>📅 Due: ${new Date(task.dueDate).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}</span>` : ''}
           ${task.assignee ? `<span style="color: #818cf8">@${task.assignee}</span>` : ''}
         </div>
       </div>
