@@ -4,6 +4,7 @@
 This is a Task Manager API built with Node.js and Express. It features a full suite of unit and integration tests, bug fixes for data integrity, and a new task assignment feature.
 
 ## Features
+- **Modern Dashboard**: A premium, responsive UI for managing tasks visually.
 - **CRUD Operations**: Create, Read, Update, and Delete tasks.
 - **Filtering**: Filter tasks by status.
 - **Pagination**: Paginated task lists.
