@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMaster Pro | Full Stack Assignment</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>TaskMaster Pro</h1>
+      <button class="btn-primary" id="toggle-form">Add New Task</button>
+    </header>
+
+    <div class="stats-grid" id="stats-container">
+      <div class="stat-card">
+        <span class="text-muted">To Do</span>
+        <span class="stat-value" id="stat-todo">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="text-muted">In Progress</span>
+        <span class="stat-value" id="stat-in-progress">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="text-muted">Done</span>
+        <span class="stat-value" id="stat-done">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="text-muted">Overdue</span>
+        <span class="stat-value" id="stat-overdue" style="color: var(--danger)">0</span>
+      </div>
+    </div>
+
+    <form class="task-form" id="task-form">
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" id="task-title" placeholder="What needs to be done?" required>
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea id="task-desc" rows="3" placeholder="Add more details..."></textarea>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div class="form-group">
+          <label>Priority</label>
+          <select id="task-priority">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Due Date</label>
+          <input type="date" id="task-due">
+        </div>
+      </div>
+      <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+        <button type="button" id="cancel-form">Cancel</button>
+        <button type="submit" class="btn-primary">Create Task</button>
+      </div>
+    </form>
+
+    <div class="task-list" id="task-list">
+      <!-- Tasks will be injected here -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
